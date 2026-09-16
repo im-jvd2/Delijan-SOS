@@ -1,0 +1,202 @@
+# ============================================================================
+#  URL Map — نگاشت آدرس‌های لاتین ← فارسی
+#  Delijan-SOS Project
+# ============================================================================
+#  🔴 این فایل «منبع حقیقت» آدرس‌هاست (D-025).
+#     هر آدرسی که در هر فایلی نوشته می‌شود باید از همین‌جا کپی شود.
+#
+#  چرا فارسی؟
+#    کارفرما 1405-06-25: «URLها همه فینگلیش هستند! این خوب نیست! مسخرمون میکنن!»
+#    → تصمیم D-025: آدرس‌ها فارسی شدند.
+#
+#  قواعد اسلاگ فارسی:
+#    1. فقط حروف فارسی + خط تیرهٔ لاتین `-`
+#    2. ⛔ نیم‌فاصله (U+200C) ممنوع — به‌جایش خط تیره: «یدک-کش» نه «یدک‌کش»
+#       (نیم‌فاصله در URL به %E2%80%8C تبدیل می‌شود و زشت و شکننده است)
+#    3. ⛔ فاصلهٔ معمولی ممنوع
+#    4. ⛔ «کسره» (ـ) در ابتدای اسلاگ ممنوع
+#    5. اعداد لاتین می‌مانند: `هزینه-امداد-خودرو-1405`
+#    6. اسلش انتهایی الزامی: `/مناطق/نراق/`
+#    7. همه lowercase (فارسی بزرگ/کوچک ندارد، اما لاتین‌های باقی‌مانده باید کوچک باشند)
+#
+#  ⚠ وردپرس این آدرس‌ها را به‌صورت percent-encoded ذخیره می‌کند
+#     (`/%D9%85%D9%86%D8%A7%D8%B7%D9%82/%D9%86%D8%B1%D8%A7%D9%82/`)
+#     اما گوگل و مرورگرها آن را **فارسی و خوانا** نمایش می‌دهند.
+# ============================================================================
+
+meta:
+  decision: "D-025"
+  decided_on: "1405-06-25"
+  replaces: "D-002 (اسلاگ لاتین) — باطل شد"
+  digits: "latin"
+  zwnj_in_slug: false
+  total_pages: 96
+
+# ---------------------------------------------------------------------------
+# ۱. بخش‌های ساختاری (path segments)
+# ---------------------------------------------------------------------------
+segments:
+  khadamat:   "خدمات"
+  manteaghe:  "مناطق"
+  jade:       "جاده"
+  magale:     "مجله"
+  hazine:     "هزینه"
+  tamasy:     "تماس"
+  darbare:    "درباره-ما"
+  sitemap:    "نقشه-سایت"
+  harim:      "حریم-خصوصی"
+  ghavanin:   "قوانین"
+
+# ---------------------------------------------------------------------------
+# ۲. صفحات ساختاری (S)
+# ---------------------------------------------------------------------------
+structural:
+  S01: { old: "/",                 new: "/" }
+  S02: { old: "/khadamat/",        new: "/خدمات/" }
+  S03: { old: "/manteaghe/",       new: "/مناطق/" }
+  S04: { old: "/jade/",            new: "/جاده/" }
+  S05: { old: "/hazine/",          new: "/هزینه/" }
+  S06: { old: "/tamasy/",          new: "/تماس/" }
+  S07: { old: "/darbare/",         new: "/درباره-ما/" }
+  S08: { old: "/magale/",          new: "/مجله/" }
+  S09: { old: "/sitemap/",         new: "/نقشه-سایت/" }
+  S10: { old: "/harim-khosousi/",  new: "/حریم-خصوصی/" }
+  S11: { old: "/ghavanin/",        new: "/قوانین/" }
+  S12: { old: "(تم‌بیلدر ۴۰۴)",     new: "(تم‌بیلدر ۴۰۴ — بدون URL)" }
+
+# ---------------------------------------------------------------------------
+# ۳. صفحات خدمت (V)
+# ---------------------------------------------------------------------------
+services:
+  V01: { old: "/khadamat/yadak-kesh-delijan/",    new: "/خدمات/یدک-کش-دلیجان/" }
+  V02: { old: "/khadamat/khodrobar-delijan/",     new: "/خدمات/خودروبر-دلیجان/" }
+  V03: { old: "/khadamat/jarasaghal-delijan/",    new: "/خدمات/جرثقیل-دلیجان/" }
+  V04: { old: "/khadamat/haml-khodro-delijan/",   new: "/خدمات/حمل-خودرو-دلیجان/" }
+  V05: { old: "/khadamat/haml-be-tamirgah/",      new: "/خدمات/حمل-خودرو-به-تعمیرگاه/" }
+  V06: { old: "/khadamat/haml-bein-shahri/",      new: "/خدمات/حمل-خودرو-بین-شهری/" }
+  V07: { old: "/khadamat/charkhgir-delijan/",     new: "/خدمات/چرخگیر-دلیجان/" }
+  V08: { old: "/khadamat/haml-khodro-tasadofi/",  new: "/خدمات/حمل-خودرو-تصادفی/" }
+  V09: { old: "/khadamat/haml-khodro-sefr/",      new: "/خدمات/حمل-خودرو-صفر/" }
+  V10: { old: "/khadamat/emdad-brand-ha/",        new: "/خدمات/امداد-خودرو-برندها/" }
+
+# ---------------------------------------------------------------------------
+# ۴. صفحات جاده‌ای (R)
+# ---------------------------------------------------------------------------
+roads:
+  R01: { old: "/jade/delijan-be-ghom/",                 new: "/جاده/دلیجان-به-قم/" }
+  R02: { old: "/jade/delijan-be-esfahan/",              new: "/جاده/دلیجان-به-اصفهان/" }
+  R03: { old: "/jade/delijan-be-arak/",                 new: "/جاده/دلیجان-به-اراک/" }
+  R04: { old: "/jade/delijan-be-kashan/",               new: "/جاده/دلیجان-به-کاشان/" }
+  R05: { old: "/jade/delijan-be-mahallat/",             new: "/جاده/دلیجان-به-محلات/" }
+  R06: { old: "/jade/delijan-be-naragh/",               new: "/جاده/دلیجان-به-نراق/" }
+  R07: { old: "/jade/delijan-be-salafchegan/",          new: "/جاده/دلیجان-به-سلفچگان/" }
+  R08: { old: "/jade/delijan-be-khomein/",              new: "/جاده/دلیجان-به-خمین/" }
+  R09: { old: "/jade/delijan-be-golpayegan/",           new: "/جاده/دلیجان-به-گلپایگان/" }
+  R10: { old: "/jade/delijan-be-abyaneh/",              new: "/جاده/دلیجان-به-ابیانه/" }
+  R11: { old: "/jade/bazargah-ghom-arak/",              new: "/جاده/بزرگراه-قم-اراک/" }
+  R12: { old: "/jade/mehvar-ghom-delijan-esfahan/",     new: "/جاده/محور-قم-دلیجان-اصفهان/" }
+  R13: { old: "/jade/mehvar-kashan-naragh-delijan/",    new: "/جاده/محور-کاشان-نراق-دلیجان/" }
+  R14: { old: "/jade/delijan-be-tehran/",               new: "/جاده/دلیجان-به-تهران/" }
+  R15: { old: "/jade/delijan-be-karaj/",                new: "/جاده/دلیجان-به-کرج/" }
+  R16: { old: "/jade/delijan-be-saveh/",                new: "/جاده/دلیجان-به-ساوه/" }
+  R17: { old: "/jade/delijan-be-shahinshahr/",          new: "/جاده/دلیجان-به-شاهین-شهر/" }
+  R18: { old: "/jade/delijan-be-mashhad-ardehal/",      new: "/جاده/دلیجان-به-مشهد-اردهال/" }
+
+# ---------------------------------------------------------------------------
+# ۵. صفحات شهری — شهرستان دلیجان (C)
+# ---------------------------------------------------------------------------
+cities_delijan:
+  C01: { old: "/manteaghe/naragh/",                  new: "/مناطق/نراق/" }
+  C02: { old: "/manteaghe/shahrak-sanati-delijan/",  new: "/مناطق/شهرک-صنعتی-دلیجان/" }
+  C03: { old: "/manteaghe/dudehak/",                 new: "/مناطق/دودهک/" }
+  C04: { old: "/manteaghe/hastijan/",                new: "/مناطق/هستیجان/" }
+  C05: { old: "/manteaghe/jaseb/",                   new: "/مناطق/جاسب/" }
+  C06: { old: "/manteaghe/jushagh/",                 new: "/مناطق/جوشق/" }
+  C07: { old: "/manteaghe/varan/",                   new: "/مناطق/واران/" }
+
+# ---------------------------------------------------------------------------
+# ۶. صفحات شهری — استان مرکزی (M)
+# ---------------------------------------------------------------------------
+cities_markazi:
+  M01: { old: "/manteaghe/mahallat/",    new: "/مناطق/محلات/" }
+  M02: { old: "/manteaghe/nimvar/",      new: "/مناطق/نیم-ور/" }
+  M03: { old: "/manteaghe/khomein/",     new: "/مناطق/خمین/" }
+  M04: { old: "/manteaghe/arak/",        new: "/مناطق/اراک/" }
+  M05: { old: "/manteaghe/qurchibashi/", new: "/مناطق/قورچی-باشی/" }
+  M06: { old: "/manteaghe/karachan/",    new: "/مناطق/کارچان/" }
+  M07: { old: "/manteaghe/saveh/",       new: "/مناطق/ساوه/" }
+  M08: { old: "/manteaghe/tafresh/",     new: "/مناطق/تفرش/" }
+  M09: { old: "/manteaghe/ashtian/",     new: "/مناطق/آشتیان/" }
+  M10: { old: "/manteaghe/komijan/",     new: "/مناطق/کمیجان/" }
+  M11: { old: "/manteaghe/farahin/",     new: "/مناطق/فرمهین/" }
+  M12: { old: "/manteaghe/shazand/",     new: "/مناطق/شازند/" }
+  M13: { old: "/manteaghe/mamuniyeh/",   new: "/مناطق/مأمونیه/" }
+  M14: { old: "/manteaghe/khandab/",     new: "/مناطق/خنداب/" }
+
+# ---------------------------------------------------------------------------
+# ۷. صفحات شهری — استان قم (Q)
+# ---------------------------------------------------------------------------
+cities_qom:
+  Q01: { old: "/manteaghe/salafchegan/", new: "/مناطق/سلفچگان/" }
+  Q02: { old: "/manteaghe/ghom/",        new: "/مناطق/قم/" }
+  Q03: { old: "/manteaghe/dastjerd/",    new: "/مناطق/دستجرد/" }
+  Q04: { old: "/manteaghe/kahak/",       new: "/مناطق/کهک/" }
+  Q05: { old: "/manteaghe/qanavat/",     new: "/مناطق/قنوات/" }
+  Q06: { old: "/manteaghe/jafariyeh/",   new: "/مناطق/جعفریه/" }
+
+# ---------------------------------------------------------------------------
+# ۸. صفحات شهری — استان اصفهان (E)
+# ---------------------------------------------------------------------------
+cities_esfahan:
+  E01: { old: "/manteaghe/meimeh/",        new: "/مناطق/میمه/" }
+  E02: { old: "/manteaghe/vazvan/",        new: "/مناطق/وزوان/" }
+  E03: { old: "/manteaghe/jushqan-qali/",  new: "/مناطق/جوشقان-قالی/" }
+  E04: { old: "/manteaghe/kashan/",        new: "/مناطق/کاشان/" }
+  E05: { old: "/manteaghe/kamu-chugan/",   new: "/مناطق/کامو-و-چوگان/" }
+  E06: { old: "/manteaghe/badroud/",       new: "/مناطق/بادرود/" }
+  E07: { old: "/manteaghe/niyasar/",       new: "/مناطق/نیاسر/" }
+  E08: { old: "/manteaghe/meshkat/",       new: "/مناطق/مشکات/" }
+  E09: { old: "/manteaghe/sefidshahr/",    new: "/مناطق/سفیدشهر/" }
+  E10: { old: "/manteaghe/aran-bidgol/",   new: "/مناطق/آران-و-بیدگل/" }
+  E11: { old: "/manteaghe/shahinshahr/",   new: "/مناطق/شاهین-شهر/" }
+  E12: { old: "/manteaghe/abyaneh/",       new: "/مناطق/ابیانه/" }
+  E13: { old: "/manteaghe/golpayegan/",    new: "/مناطق/گلپایگان/" }
+  E14: { old: "/manteaghe/khansar/",       new: "/مناطق/خوانسار/" }
+
+# ---------------------------------------------------------------------------
+# ۹. نوشته‌های مجله (B) — زیر /مجله/
+# ---------------------------------------------------------------------------
+blog:
+  B01: { old: "hazine-emdad-khodro-1405",  new: "هزینه-امداد-خودرو-1405" }
+  B02: { old: "kharabi-khodro-dar-jade",   new: "خرابی-خودرو-در-جاده" }
+  B03: { old: "yadak-kesh-ya-kafi-khodrobar", new: "یدک-کش-یا-کفی-خودروبر" }
+  B04: { old: "ghar-chal-nakhjir-delijan", new: "غار-چال-نخجیر-دلیجان" }
+  B05: { old: "osul-batri-be-batri",       new: "اصول-باتری-به-باتری" }
+  B06: { old: "pancheri-lastik-dar-jade",  new: "پنچری-لاستیک-در-جاده" }
+  B07: { old: "alamat-kharabi-dinam",      new: "علایم-خرابی-دینام-و-باتری" }
+  B08: { old: "ranandegi-zemestani-delijan", new: "رانندگی-زمستانی-در-دلیجان" }
+  B09: { old: "jazebeh-haye-delijan",      new: "جاذبه-های-گردشگری-دلیجان" }
+  B10: { old: "checklist-khodro-ghabl-safar", new: "چک-لیست-خودرو-پیش-از-سفر" }
+  B11: { old: "faseleh-delijan-ta-shahrha", new: "فاصله-دلیجان-تا-شهرهای-اطراف" }
+  B12: { old: "haml-khodro-sefr",          new: "حمل-خودرو-صفر-کیلومتر" }
+  B13: { old: "cheragh-haye-dashbord",     new: "چراغ-های-هشدار-داشبورد" }
+  B14: { old: "jabejaee-khodro-tasadofi",  new: "جابه-جایی-خودرو-تصادفی" }
+  B15: { old: "ab-o-havaye-delijan",       new: "اب-وهوا-و-بهترین-زمان-سفر-دلیجان" }
+
+# ---------------------------------------------------------------------------
+# ۱۰. الزامات پیاده‌سازی در وردپرس
+# ---------------------------------------------------------------------------
+implementation:
+  permalink_structure: "/%category%/%postname%/ برای نوشته‌ها · برگه‌ها دستی"
+  encoding_note: |
+    وردپرس اسلاگ فارسی را percent-encoded ذخیره می‌کند. این طبیعی است.
+    در `wp_options` مقدار `permalink_structure` همان الگوی بالا می‌ماند.
+  redirects: |
+    چون سایت هنوز لانچ نشده، هیچ 301 لازم نیست.
+    اگر بعداً اسلاگی عوض شد، با افزونهٔ Redirection یک 301 زده می‌شود.
+  rank_math: "Rank Math اسلاگ فارسی را درست در sitemap و canonical می‌گذارد — تنظیم اضافی لازم نیست."
+  forbidden_in_slug:
+    - "نیم‌فاصله U+200C"
+    - "فاصلهٔ معمولی"
+    - "حروف لاتین (مگر اعداد)"
+    - "کسرهٔ آغازین"
